@@ -1,0 +1,14 @@
+<table class="table table-striped">
+    <tr>
+        <th>Debtor</th>
+        <th>Creditor</th>
+        <th>Amount</th>
+        <th>Title</th>
+    </tr>
+    <tr ng-repeat="payment in payments">
+        <td>{{payment.debit}}</td>
+        <td>{{payment.credit}}</td>
+        <td>{{payment.amount}}</td>
+        <td>{{payment.title}}</td>
+    </tr>
+</table>
