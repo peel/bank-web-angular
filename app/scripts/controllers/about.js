@@ -8,10 +8,9 @@
  * Controller of the webApp
  */
 angular.module('webApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('AboutCtrl', function ($scope, $http) {
+        $http.get('http://localhost:8001/customers/1').
+            success(function (data) {
+                $scope.customer = data;
+            });
+    });
